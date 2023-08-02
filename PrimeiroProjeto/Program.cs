@@ -51,7 +51,7 @@ void ExibirOpcoesDoMenu ()
             break;
         case 4: Console.WriteLine("Você digitou a opção " + opcaoEscolhida);
             break;
-        case -1: Console.WriteLine("Você digitou a opção " + opcaoEscolhida);
+        case -1: Console.WriteLine("Tchau Tchau :)");
             break;
         default: Console.WriteLine("Opção invalida");
             break;
