@@ -1,6 +1,6 @@
 ﻿//Screen Sound
 string mensagemBoasVindas = "Boas Vindas ao Screen Sound";
-List<string> listaDasBandas = new List<string>();
+List<string> listaDasBandas = new List<string> { "U2", "The Beatles", "Calipso"};
 
 void ExibirLogo()
 {
@@ -71,7 +71,7 @@ void RegistrarBanda()
     string nomeDaBanda = Console.ReadLine()!;
     listaDasBandas.Add(nomeDaBanda);
     Console.WriteLine($"A banda {nomeDaBanda} foi registrada com sucesso");
-    Thread.Sleep(2000);
+    Thread.Sleep(1000);
     Console.Clear();
     ExibirOpcoesDoMenu();
 
