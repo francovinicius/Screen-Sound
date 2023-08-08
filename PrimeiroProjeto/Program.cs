@@ -82,12 +82,12 @@ void MostrarBandasRegistradas()
     Console.Clear();
     Console.WriteLine("**************************************");
     Console.WriteLine("Exibindo todas as Bandas Registradas");
-    Console.WriteLine("**************************************");
+    Console.WriteLine("**************************************\n");
     for (int i = 0; i < listaDasBandas.Count; i++)
     {
         Console.WriteLine($"Banda: {listaDasBandas[i]}");
     }
-    Console.WriteLine("Precione qualquer tecla para voltar ao Menu Principal");
+    Console.WriteLine("\nPrecione qualquer tecla para voltar ao Menu Principal");
     Console.ReadKey();
     Console.Clear();
     ExibirOpcoesDoMenu() ;
