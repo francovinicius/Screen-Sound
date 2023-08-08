@@ -1,7 +1,7 @@
 ﻿//Screen Sound
 string mensagemBoasVindas = "Boas Vindas ao app";
 
-void ExibirMensagemBoasVindas()
+void ExibirLogo()
 {
     Console.WriteLine(@"
 
@@ -18,6 +18,7 @@ void ExibirMensagemBoasVindas()
 
 void ExibirOpcoesDoMenu ()
 {
+    ExibirLogo();
     //\n pra dar espaço
     Console.WriteLine("\nDigite 1 para registrar uma banda");
     Console.WriteLine("Digite 2 para mostrar todas as bandas");
@@ -71,6 +72,4 @@ void RegistrarBanda()
     ExibirOpcoesDoMenu();
 
 }
-
-ExibirMensagemBoasVindas();
 ExibirOpcoesDoMenu();
