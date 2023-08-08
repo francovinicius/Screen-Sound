@@ -48,7 +48,7 @@ void ExibirOpcoesDoMenu ()
     {
         case 1: RegistrarBanda();
             break;
-        case 2: Console.WriteLine("Você digitou a opção " + opcaoEscolhida);
+        case 2: MostrarBandasRegistradas();
             break;
         case 3: Console.WriteLine("Você digitou a opção " + opcaoEscolhida);
             break;
@@ -64,7 +64,9 @@ void ExibirOpcoesDoMenu ()
 void RegistrarBanda()
 {
     Console.Clear();
+    Console.WriteLine("***********************");
     Console.WriteLine("Registro de Bandas");
+    Console.WriteLine("***********************");
     Console.Write("Digite o nome da banda que deseja registrar: ");
     string nomeDaBanda = Console.ReadLine()!;
     listaDasBandas.Add(nomeDaBanda);
@@ -74,4 +76,14 @@ void RegistrarBanda()
     ExibirOpcoesDoMenu();
 
 }
+
+void MostrarBandasRegistradas()
+{
+    Console.Clear();
+    Console.WriteLine("***********************");
+    Console.WriteLine("Exibindo todas as Bandas Registradas");
+    Console.WriteLine("***********************");
+}
+
+
 ExibirOpcoesDoMenu();
