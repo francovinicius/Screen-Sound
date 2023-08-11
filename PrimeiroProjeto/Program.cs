@@ -5,7 +5,7 @@ string mensagemBoasVindas = "Boas Vindas ao Screen Sound";
 //criando um dicionario vazio
 Dictionary<string, List<int>> bandasRegistradas = new Dictionary<string, List<int>>();
 bandasRegistradas.Add("U2", new List<int> { 10, 8, 6 });
-bandasRegistradas.Add("Link Park", new List<int> ());
+bandasRegistradas.Add("Linkin Park", new List<int> ());
 
 void ExibirLogo()
 {
@@ -57,7 +57,7 @@ void ExibirOpcoesDoMenu ()
             break;
         case 3: AvaliarBanda();
             break;
-        case 4: Console.WriteLine("Você digitou a opção " + opcaoEscolhida);
+        case 4: ExibirMediaDaBanda();
             break;
         case -1: Console.WriteLine("Tchau Tchau :)");
             break;
@@ -131,7 +131,7 @@ void AvaliarBanda()
         //add nota a lista
         bandasRegistradas[nomeDaBanda].Add(nota);
         Console.WriteLine("\nNota registrada com sucesso!");
-        Thread.Sleep(1000);
+        Thread.Sleep(2000);
         Console.Clear() ;
         ExibirOpcoesDoMenu();
 
@@ -146,6 +146,29 @@ void AvaliarBanda()
     }
 
     
+}
+
+void ExibirMediaDaBanda()
+{
+    Console.Clear();
+    ExibirTituloDaOpcao("Média da Banda");
+    Console.Write("Digite o nome da banda: ");
+    //pegar nome da banda
+    string nomeDaBanda = Console.ReadLine()!;
+
+    if (bandasRegistradas.ContainsKey(nomeDaBanda))
+    {
+        Console.WriteLine("teste");
+    }
+    else
+    {
+        Console.WriteLine($"\nA banda {nomeDaBanda} não foi encontrada!");
+        Console.WriteLine("Digite uma tecla para voltar ao menu principal");
+        //qualquer tecla
+        Console.ReadKey();
+        Console.Clear();
+        ExibirOpcoesDoMenu();
+    }
 }
 
 
